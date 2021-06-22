@@ -7,7 +7,7 @@ public class ConsoleExercises {
 //        double pi = 3.14159;
 //        System.out.printf("The value of pi is approximately %.2f.", pi);
 
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
 
 //        System.out.println("Please input a int: ");
 //        int userInput = scanner.nextInt();
@@ -27,6 +27,29 @@ public class ConsoleExercises {
 //
 //        System.out.println(sentence);
 
+
+        Scanner scanner = new Scanner(System.in);
+
+
+        System.out.println("Please enter a number for length: ");
+//        float length = scanner.nextFloat();
+        int length = scanner.nextInt();
+
+        System.out.println("Please enter a number for width: ");
+//        float width = scanner.nextFloat();
+        int width = scanner.nextInt();
+
+
+//        float area = length * width;
+        int area = length * width;
+//        float perimeter = 2 * (length + width);
+        int perimeter = 2 * (length + width);
+
+//        System.out.printf("The area of the room is: %.2f feet \n", area);
+        System.out.printf("The area of the room is: %d feet\n", area);
+//        System.out.printf("The perimeter of the room is: %.2f feet", perimeter);
+        System.out.printf("The perimeter of the room is: %d feet\n", perimeter);
+        scanner.close();
     }
 
 }
