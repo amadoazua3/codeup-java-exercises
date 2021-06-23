@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 import java.util.*;
 
@@ -48,18 +49,38 @@ public class ConsoleIO {
         //  been used by user1, user2, or user3, print "sorry this
         //  username already exists.
 
-        String user1 = "Vash";
-        String user2 = "Noel";
+        String user1 = "Erik";
+        String user2 = "Moses";
         String user3 = "Amado";
 
         System.out.println("Please input a new username: ");
 
         String userInput = sc.next();
 
-        if(userInput.equals(user1) || userInput.equals(user2) || userInput.equals(user3)){
-            System.out.println("Sorry this username already exists.");
-        }else {
-            System.out.println("You have a valid username.");
+//        if(userInput.equals(user1) || userInput.equals(user2) || userInput.equals(user3)){
+//            System.out.println("Sorry this username already exists.");
+//        }else {
+//            System.out.println("You have a valid username.");
+//        }
+
+
+        //TODO: refactor your code from the previous mini exercise into a switch statement
+
+
+        switch(userInput){
+
+            case "Erik":
+                System.out.println("Sorry this username already exists.");
+                break;
+            case "Moses":
+                System.out.println("Sorry this username already exists.");
+                break;
+            case "Amado":
+                System.out.println("Sorry this username already exists.");
+                break;
+            default:
+                System.out.println("You have a valid username.");
+                break;
         }
 
     }
