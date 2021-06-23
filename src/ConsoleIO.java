@@ -1,6 +1,7 @@
-import java.sql.SQLOutput;
+
 import java.util.Scanner;
-import java.util.*;
+import java.lang.*;
+import java.io.IOException;
 
 public class ConsoleIO {
 
@@ -53,9 +54,9 @@ public class ConsoleIO {
         String user2 = "Moses";
         String user3 = "Amado";
 
-        System.out.println("Please input a new username: ");
+//        System.out.println("Please input a new username: ");
 
-        String userInput = sc.next();
+//        String userInput = sc.next();
 
 //        if(userInput.equals(user1) || userInput.equals(user2) || userInput.equals(user3)){
 //            System.out.println("Sorry this username already exists.");
@@ -66,21 +67,37 @@ public class ConsoleIO {
 
         //TODO: refactor your code from the previous mini exercise into a switch statement
 
+//
+//        switch(userInput){
+//
+//            case "Erik":
+//                System.out.println("Sorry this username already exists.");
+//                break;
+//            case "Moses":
+//                System.out.println("Sorry this username already exists.");
+//                break;
+//            case "Amado":
+//                System.out.println("Sorry this username already exists.");
+//                break;
+//            default:
+//                System.out.println("You have a valid username.");
+//                break;
+//        }
 
-        switch(userInput){
+        //TODO: using previous mini exercise, allow the user to input a new username several times until a unique username is entered.
 
-            case "Erik":
-                System.out.println("Sorry this username already exists.");
+        while(true) {
+
+            System.out.println("Please input a new username: ");
+            String userInput = sc.next();
+
+            if (userInput.equals(user1) || userInput.equals(user2) || userInput.equals(user3)) {
+                System.out.println("Please enter a unique ");
+            }else{
+                System.out.printf("Hello, %s", userInput);
                 break;
-            case "Moses":
-                System.out.println("Sorry this username already exists.");
-                break;
-            case "Amado":
-                System.out.println("Sorry this username already exists.");
-                break;
-            default:
-                System.out.println("You have a valid username.");
-                break;
+            }
+
         }
 
     }
