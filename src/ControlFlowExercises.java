@@ -13,7 +13,7 @@ public class ControlFlowExercises {
 //            i++;
 //        }
 
-//        2.(A)
+//        (B)-1
 
 //        int num = 0;
 //
@@ -24,7 +24,7 @@ public class ControlFlowExercises {
 //
 //        }while(num <= 100);
 
-//        2.(B)
+//        (B)-2
 
 //        int num = 100;
 //        do{
@@ -33,7 +33,7 @@ public class ControlFlowExercises {
 //
 //        }while(num >= -5);
 
-//        2.(C)
+//        (B)-3
 
 /* Due to the range of int the following sequence produced is
 
@@ -57,7 +57,42 @@ With a long, the number after 65536 would be 4294967296
 //
 //        }while(num < 1000000);
 
+//        (C)
 
+//        for(int i = 5; i <= 15; i++){
+//            System.out.printf("i: %d\n", i);
+//        }
+
+//        for(int i = 2; i <= 100; i+=2){
+//            System.out.printf("i: %d\n", i);
+//        }
+
+//        for(int i = 100; i >= -10; i-=5){
+//            System.out.printf("i: %d\n", i);
+//        }
+
+//        for(long i = 2; i < 1000000; i*=i){
+//            System.out.printf("i: %d\n", i);
+//        }
+
+//        2. FizzBuzz
+
+//        for(int i = 1; i <= 100; i++){
+//
+//            if(i % 15 == 0){
+//                System.out.println("FizzBuzz");
+//            }
+//            else if(i % 5 == 0){
+//                System.out.println("Buzz");
+//            }
+//            else if(i % 3 == 0){
+//                System.out.println("Fizz");
+//            }else {
+//                System.out.printf("i: %d\n", i);
+//            }
+//        }
+
+//        3. Table of powers
 
 
     }
