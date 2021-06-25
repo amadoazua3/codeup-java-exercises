@@ -13,10 +13,10 @@ public class ControlFlowExercises {
 
         do{
 
-            num += 2;
             System.out.printf("num is: %d\n", num);
+            num += 2;
 
-        }while(num < 100);
+        }while(num <= 100);
 
     }
 }
