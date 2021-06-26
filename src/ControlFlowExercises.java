@@ -95,5 +95,11 @@ With a long, the number after 65536 would be 4294967296
 //        3. Table of powers
 
 
+//
+//        for(){
+//
+//        }
+
+
     }
 }
