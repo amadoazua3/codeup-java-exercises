@@ -10,7 +10,7 @@ public class Bob {
         String handle = scanner.nextLine();
 
 
-        System.out.println("Meet Bob, He is a lackadaisical teenager.\n" +
+        System.out.println("\n\nMeet Bob, He is a lackadaisical teenager.\n" +
                 "Please, have a conversation with Bob.\n" +
                 "Ask him questions, share your enthusiasm, or say nothing.\n\n");
 
