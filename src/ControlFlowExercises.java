@@ -96,25 +96,33 @@ With a long, the number after 65536 would be 4294967296
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("What number would you like to go up to?");
+        while(true) {
 
-        int input = scanner.nextInt();
+            System.out.println("What number would you like to go up to?");
 
-        System.out.println("Here is your table!\n");
-        System.out.println("number | squared | cubed");
-        System.out.println("------ | ------- | -----");
+            int input = scanner.nextInt();
 
-        for(int i = 1; i <= input; i++){
+            System.out.println("Here is your table!\n");
+            System.out.println("number | squared | cubed");
+            System.out.println("------ | ------- | -----");
 
-            int squared = i * i;
-            int cubed = i * i * i;
+            for (int i = 1; i <= input; i++) {
 
-            System.out.println(i +"      | " + squared + "\t\t | " + cubed);
+                int squared = i * i;
+                int cubed = i * i * i;
+
+                System.out.println(i + "      | " + squared + "\t\t | " + cubed);
+            }
+
+            System.out.println("Would you like to continue? (y/n)");
+            String answer = scanner.next().toLowerCase();
+
+            if(answer.equals("y")) {
+                continue;
+            } else {
+                break;
+            }
+
         }
-
-        System.out.println("Would you like to continue? (y/n)");
-        String answer = scanner.next();
-
-
     }
 }
