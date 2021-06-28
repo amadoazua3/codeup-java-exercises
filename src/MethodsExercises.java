@@ -107,11 +107,11 @@ public class MethodsExercises {
 
         if(input < min){
             System.out.print("Invalid number! Please enter a number between 1 and 10: ");
-            input = scanner.nextInt();
+
             Factorial(1, 10);
         } else if(input > max){
             System.out.print("Invalid number! Please enter a number between 1 and 10: ");
-            input = scanner.nextInt();
+
             Factorial(1, 10);
         }
 
@@ -126,7 +126,7 @@ public class MethodsExercises {
 
         if (prompt.equals("y")) {
             System.out.print("Enter a number between 1 and 10: ");
-            input = scanner.nextInt();
+
             Factorial(1, 10);
         } else if(prompt.equals("n")){
             return fact;
