@@ -56,9 +56,9 @@ public class StringsLecture {
 
         String input = scanner.next();
 
-        if(input.startsWith("Red")) {
+        if(colors.startsWith(input)) {
             System.out.println("My fave color: " + input + " is the first one!");
-        } else if(input.endsWith("Purple")){
+        } else if(colors.endsWith(input)){
             System.out.println("My fave color: " + input + " is last...");
         } else {
             System.out.println("I don't know that color...");
