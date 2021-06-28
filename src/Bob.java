@@ -25,7 +25,7 @@ public class Bob {
                 System.out.println("Bob: Whoa, chill out!");
             } else if(chat.isEmpty()){
                 System.out.println("Bob: Fine. Be that way!");
-            } else if(chat.equals("break")){
+            } else if(chat.equals("bye")){
                 break;
             } else {
                 System.out.println("Bob: Whatever...");
