@@ -19,27 +19,49 @@ public class StringsLecture {
 
         Scanner scanner = new Scanner(System.in);
 
-        String[] studentsArr =
-                {"Amado", "Christian", "Christopher", "Corey", "Demetrio",
-                        "Diamond", "Erik", "Grady", "Jesse", "Joshua",
-                        "Juan", "Mitchell", "Moses", "Nathan", "Prachi",
-                        "Raul", "Ricardo", "Richard", "Robert", "Sam",
-                        "Sean", "Stephen", "Tiffanny", "Wagner", "Laura",
-                        "Casey", "Dorian", "Tristan", "Jordy"};
-        int randomNum = (int) (Math.random() * 28);
+//        String[] studentsArr =
+//                {"Amado", "Christian", "Christopher", "Corey", "Demetrio",
+//                        "Diamond", "Erik", "Grady", "Jesse", "Joshua",
+//                        "Juan", "Mitchell", "Moses", "Nathan", "Prachi",
+//                        "Raul", "Ricardo", "Richard", "Robert", "Sam",
+//                        "Sean", "Stephen", "Tiffanny", "Wagner", "Laura",
+//                        "Casey", "Dorian", "Tristan", "Jordy"};
+//        int randomNum = (int) (Math.random() * 28);
+//
+//        String randomName = studentsArr[randomNum];
+//
+//        System.out.print("Please type in your first name: ");
+//
+//        String fName = scanner.next();
+//
+//        if(fName.equals(randomName)){
+//            System.out.println("Woah! you guessed: " + randomName + "! " +
+//                    "How did you know " + fName + " is my name?!");
+//        } else {
+//            System.out.println("Way off my friend! My name isn't " +
+//                    fName + ". It's " + randomName + ".");
+//        }
 
-        String randomName = studentsArr[randomNum];
 
-        System.out.print("Please type in your first name: ");
+//        TODO: create a String variable that holds this sentence: "Red
+//         Orange Blue Yellow Green Purple". Prompt the user to type in
+//         their favorite color, if their fave color is the same as the
+//         first word in the String, then print out "my fave color:
+//         userColor is the first one". If their fave color is last, then print out "my fave color: userColor is last"
 
-        String fName = scanner.next();
 
-        if(fName.equals(randomName)){
-            System.out.println("Woah! you guessed: " + randomName + "! " +
-                    "How did you know " + fName + " is my name?!");
+        String colors = "Red Orange Blue Yellow Green Purple";
+
+        System.out.print("What is your favorite color: ");
+
+        String input = scanner.next();
+
+        if(input.startsWith("Red")) {
+            System.out.println("My fave color: " + input + " is the first one!");
+        } else if(input.endsWith("Purple")){
+            System.out.println("My fave color: " + input + " is last...");
         } else {
-            System.out.println("Way off my friend! My name isn't " +
-                    fName + ". It's " + randomName + ".");
+            System.out.println("I don't know that color...");
         }
 
     }
