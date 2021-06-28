@@ -101,19 +101,39 @@ public class MethodsExercises {
 
         Scanner scanner = new Scanner(System.in);
 
-        long input = scanner.nextLong();
-
         long fact = 1;
 
-        for(int i = 1; i <= input; i++){
+        int input = scanner.nextInt();
+
+        if(input < min){
+            System.out.print("Invalid number! Please enter a number between 1 and 10: ");
+            input = scanner.nextInt();
+            Factorial(1, 10);
+        } else if(input > max){
+            System.out.print("Invalid number! Please enter a number between 1 and 10: ");
+            input = scanner.nextInt();
+            Factorial(1, 10);
+        }
+
+        for (int i = 1; i <= input; i++) {
             fact = fact * i;
             System.out.println(i + "! = " + fact);
         }
 
+        System.out.print("Would you like to continue? (y/n): ");
+
+        String prompt = scanner.next().toLowerCase();
+
+        if (prompt.equals("y")) {
+            System.out.print("Enter a number between 1 and 10: ");
+            input = scanner.nextInt();
+            Factorial(1, 10);
+        } else if(prompt.equals("n")){
+            return fact;
+        }
+
         return fact;
     }
-
-
 
 
 }
