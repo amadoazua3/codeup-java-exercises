@@ -49,21 +49,59 @@ public class StringsLecture {
 //         first word in the String, then print out "my fave color:
 //         userColor is the first one". If their fave color is last, then print out "my fave color: userColor is last"
 
+//
+//        String colors = "Red Orange Blue Yellow Green Purple";
+//
+//        System.out.print("What is your favorite color: ");
+//
+//        String input = scanner.next();
+//
+//        if(colors.startsWith(input)) {
+//            System.out.println("My fave color: " + input + " is the first one!");
+//        } else if(colors.endsWith(input)){
+//            System.out.println("My fave color: " + input + " is last...");
+//        } else {
+//            System.out.println("I don't know that color...");
+//        }
 
-        String colors = "Red Orange Blue Yellow Green Purple";
-
-        System.out.print("What is your favorite color: ");
-
-        String input = scanner.next();
-
-        if(colors.startsWith(input)) {
-            System.out.println("My fave color: " + input + " is the first one!");
-        } else if(colors.endsWith(input)){
-            System.out.println("My fave color: " + input + " is last...");
-        } else {
-            System.out.println("I don't know that color...");
-        }
+        System.out.print("Enter in a basketball team: ");
+        String team = scanner.nextLine();
+        basketballTeam(team);
 
     }
+
+//    TODO: create a new method that accepts the name of a basketball
+//     team (ex: the spurs) and returns a String that says
+//     "[basketballTeam] is the best team.". Invoke that method within
+//     your main method (remember to pass in the name of the basketball
+//     team). print out the result of the new method.
+
+        public static void basketballTeam(String s){
+
+            String ballTeam = s + " is the best team!";
+            System.out.println(ballTeam);
+
+            counter(ballTeam);
+        }
+
+
+//    TODO: create a new method that accepts the string created from the
+//     first method and returns the number of characters in that string.
+
+        public static void counter(String str){
+
+            System.out.println("With white spaces the number of characters is " + str.length());
+
+            int count = 0;
+
+            for(int i = 0; i < str.length(); i++){
+                if(str.charAt(i) != ' '){
+                    count++;
+                }
+
+
+            }
+            System.out.println("Without white spaces the number of characters is " + count);
+        }
 
 }
