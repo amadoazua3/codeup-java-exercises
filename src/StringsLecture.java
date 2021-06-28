@@ -1,3 +1,5 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Scanner;
 
 public class StringsLecture {
@@ -64,9 +66,23 @@ public class StringsLecture {
 //            System.out.println("I don't know that color...");
 //        }
 
-        System.out.print("Enter in a basketball team: ");
-        String team = scanner.nextLine();
-        basketballTeam(team);
+//        System.out.print("Enter in a basketball team: ");
+//        String team = scanner.nextLine();
+//        basketballTeam(team);
+
+//       Name and Age mini exercise
+
+        System.out.print("What is your first name: ");
+        String first = scanner.next();
+
+        System.out.print("What is your last name: ");
+        String last = scanner.next();
+
+        System.out.print("How old are you: ");
+        String age = scanner.next();
+
+        System.out.println(fullName(first, last));
+        System.out.println(age(age));
 
     }
 
@@ -76,32 +92,55 @@ public class StringsLecture {
 //     your main method (remember to pass in the name of the basketball
 //     team). print out the result of the new method.
 
-        public static void basketballTeam(String s){
-
-            String ballTeam = s + " is the best team!";
-            System.out.println(ballTeam);
-
-            counter(ballTeam);
-        }
+//        public static void basketballTeam(String s){
+//
+//            String ballTeam = s + " is the best team!";
+//            System.out.println(ballTeam);
+//
+//            counter(ballTeam);
+//        }
 
 
 //    TODO: create a new method that accepts the string created from the
 //     first method and returns the number of characters in that string.
+//
+//        public static void counter(String str){
+//
+//            System.out.println("With white spaces the number of characters is " + str.length());
+//
+//            int count = 0;
+//
+//            for(int i = 0; i < str.length(); i++){
+//                if(str.charAt(i) != ' '){
+//                    count++;
+//                }
+//
+//
+//            }
+//            System.out.println("Without white spaces the number of characters is " + count);
+//        }
 
-        public static void counter(String str){
+//    TODO: invoke a method that accepts (and returns) the following:
+//        - accepts: your first name and your last name. returns: A
+//        string that reads: "Hello Laura Ruiz-Roehrs (replace with your
+//        first and last)";
+//       - accepts: your age. returns: "that's crazy! you don't look
+//        100 years old!"
 
-            System.out.println("With white spaces the number of characters is " + str.length());
+        public static String fullName(String str1, String str2){
 
-            int count = 0;
+            String greeting = "Hello " + str1 + " " + str2 + "!";
 
-            for(int i = 0; i < str.length(); i++){
-                if(str.charAt(i) != ' '){
-                    count++;
-                }
-
-
-            }
-            System.out.println("Without white spaces the number of characters is " + count);
+            return greeting;
         }
+
+        public static String age(String str){
+
+            String wow = "Wow! That's crazy! You don't look " + str + " years old!";
+
+            return wow;
+
+        }
+
 
 }

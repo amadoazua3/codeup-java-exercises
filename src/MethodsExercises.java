@@ -35,10 +35,13 @@ public class MethodsExercises {
 
 //        3. Calculate the factorial of a number
 
+//        System.out.print("Enter a number between 1 and 10: ");
+//
+//        Factorial(1, 10);
 
-        System.out.print("Enter a number between 1 and 10: ");
+//        4. Dice roll simulation
 
-        Factorial(1, 10);
+
 
     }
 
@@ -99,45 +102,53 @@ public class MethodsExercises {
 //    3.
 
 
-    public static void Factorial(int min, int max){
+//    public static void Factorial(int min, int max){
+//
+//        while (true) {
+//
+//        Scanner scanner = new Scanner(System.in);
+//
+//        int input = scanner.nextInt();
+//
+//        if(input < min){
+//            System.out.print("Please re-enter a number between 1 and 10: ");
+//            Factorial(1, 10);
+//        } else if(input > max){
+//            System.out.print("Please re-enter a number between 1 and 10: ");
+//            Factorial(1, 10);
+//        } else {
+//
+//            long fact = 1;
+//
+//            for (int i = 1; i <= input; i++) {
+//                fact = fact * i;
+//                System.out.println(i + "! = " + fact);
+//            }
+//
+//                System.out.print("Would you like to continue? (y/n): ");
+//
+//                String prompt = scanner.next().toLowerCase();
+//
+//                if (prompt.equals("y")) {
+//                    System.out.print("Enter a number between 1 and 10: ");
+//                    continue;
+//                } else if (prompt.equals("n")) {
+//                    break;
+//                }
+//
+//            }
+//            break;
+//        }
+//    }
 
-        while (true) {
 
-        Scanner scanner = new Scanner(System.in);
+//    4. Dice roll simulation
 
-        int input = scanner.nextInt();
-
-        if(input < min){
-            System.out.print("Please re-enter a number between 1 and 10: ");
-            Factorial(1, 10);
-        } else if(input > max){
-            System.out.print("Please re-enter a number between 1 and 10: ");
-            Factorial(1, 10);
-        } else {
-
-            long fact = 1;
-
-            for (int i = 1; i <= input; i++) {
-                fact = fact * i;
-                System.out.println(i + "! = " + fact);
-            }
-
-                System.out.print("Would you like to continue? (y/n): ");
-
-                String prompt = scanner.next().toLowerCase();
-
-                if (prompt.equals("y")) {
-                    System.out.print("Enter a number between 1 and 10: ");
-                    continue;
-                } else if (prompt.equals("n")) {
-                    break;
-                }
-
-            }
-            break;
-        }
-    }
-
+//    public static int random(){
+//
+//
+//
+//    }
 
 
 }
