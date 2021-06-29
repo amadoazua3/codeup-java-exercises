@@ -1,10 +1,11 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class MethodsExercises {
 
     public static void main(String[] args) {
 
-//        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
 //        1. Basic Arithmetic
 
@@ -41,8 +42,28 @@ public class MethodsExercises {
 
 //        4. Dice roll simulation
 
+        while(true) {
 
+            System.out.print("How many sides will the die have: ");
+            int diceSides = scanner.nextInt();
 
+            int die1 = roll(diceSides);
+            int die2 = roll(diceSides);
+
+            System.out.println("You rolled a " + die1 + " and a " + die2);
+
+            System.out.print("Would you like to roll again? (y/n):");
+            String input = scanner.next().toLowerCase();
+
+            if (input.equals("y")) {
+                continue;
+            } else if (input.equals("n")) {
+                break;
+            } else {
+                break;
+            }
+
+        }
     }
 
 //    public static int Addition(int n1, int n2){
@@ -144,11 +165,12 @@ public class MethodsExercises {
 
 //    4. Dice roll simulation
 
-//    public static int random(){
-//
-//
-//
-//    }
+    public static int roll(int diceSides){
 
+        Random rand = new Random();
+        int sides = rand.nextInt(diceSides);
+        sides = sides + 1;
 
+        return sides;
+    }
 }
