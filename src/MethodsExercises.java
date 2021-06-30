@@ -85,7 +85,7 @@ public class MethodsExercises {
 //
 //            sum = sum + n2;
 //        }
-//
+
 //        return sum;
 //
 ////        Conventional way of multiplication

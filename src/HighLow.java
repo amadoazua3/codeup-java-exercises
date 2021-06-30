@@ -6,13 +6,19 @@ public class HighLow {
     public static void main(String[] args) {
 
 
-
         int mysteryNumber = randomNumber();
 
-        int userNum = userNumber();
+        while(true) {
 
+            int userNum = userNumber();
 
-        guess(mysteryNumber, userNum);
+            boolean game = guess(mysteryNumber, userNum);
+
+            if(game){
+                break;
+            }
+
+        }
 
     }
 
@@ -44,7 +50,7 @@ public class HighLow {
 
     }
 
-    public static void guess(int mysteryNum, int userNum){
+    public static boolean guess(int mysteryNum, int userNum){
 
         if(userNum > mysteryNum){
             System.out.println("LOWER");
@@ -54,9 +60,10 @@ public class HighLow {
             userNumber();
         } else if(userNum == mysteryNum){
             System.out.println("GOOD GUESS!");
+            return true;
         }
 
-
+        return false;
     }
 
 
