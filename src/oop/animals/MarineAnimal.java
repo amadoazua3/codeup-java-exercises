@@ -52,7 +52,7 @@ public class MarineAnimal {
         return isSaltwater;
     }
 
-    public void setSaltwater(boolean saltwater) {
+    public void setSaltwater(boolean saltwater, int howSalty) {
         isSaltwater = saltwater;
     }
 

@@ -26,4 +26,9 @@ public class Fish extends MarineAnimal{
     public void setHasScales(boolean hasScales) {
         this.hasScales = hasScales;
     }
+
+    public String getName(){
+        return super.getName().toUpperCase();
+    }
+    
 }

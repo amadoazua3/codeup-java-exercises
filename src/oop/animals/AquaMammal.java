@@ -2,6 +2,7 @@ package oop.animals;
 
 public class AquaMammal extends MarineAnimal{
 
+
     private int maxTimeSubmerged;
 
 
@@ -15,4 +16,14 @@ public class AquaMammal extends MarineAnimal{
     }
 
 
+
+    public AquaMammal(){}
+
+    public int getMaxTimeSubmerged() {
+        return maxTimeSubmerged;
+    }
+
+    public void setMaxTimeSubmerged(int maxTimeSubmerged) {
+        this.maxTimeSubmerged = maxTimeSubmerged;
+    }
 }
