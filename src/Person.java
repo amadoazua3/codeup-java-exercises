@@ -10,10 +10,12 @@ public class Person {
 //        Create a `main` method on the class that creates a new `Person` object and
 //        tests the above methods.
 
-        Person person = new Person("Amado");
+//        Person person = new Person("Amado");
 
-//        person.setName("Jesse");
-//        person.sayHello();
+        Person person = new Person();
+
+        person.setName("Jesse");
+        person.sayHello();
 
 //        Person person1 = new Person("John");
 //        Person person2 = new Person("John");
