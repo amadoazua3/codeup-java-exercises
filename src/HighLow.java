@@ -11,7 +11,6 @@ public class HighLow {
 
     }
 
-
     public static int randomNumber(){
 
         Random rand = new Random();
