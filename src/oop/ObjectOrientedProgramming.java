@@ -6,6 +6,8 @@ public class ObjectOrientedProgramming {
     public static void main(String[] args) {
         // tell me about a person
 
+//        Person person = new Person("Amado", 30, "short", "American");
+
         Person person = new Person();
 
         person.setName("Amado");
