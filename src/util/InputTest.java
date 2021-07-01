@@ -12,9 +12,9 @@ public class InputTest {
 
 //        System.out.println(input.getDouble(1, 50));
 
-//        System.out.println(input.getInt(1,50));
+        System.out.println(input.getInt(1,50));
 
-        System.out.println(input.yesNo());
+//        System.out.println(input.yesNo());
 
 
 
