@@ -5,7 +5,6 @@ public class HighLow {
 
     public static void main(String[] args) {
 
-
        int random = randomNumber();
 
         userNumber(random);
@@ -45,9 +44,7 @@ public class HighLow {
 
     public static void guess(int random, int userNum){
 
-        while(true) {
-
-            System.out.println("User number: " + userNum);
+        System.out.println("User number: " + userNum);
 
             if(userNum > random){
                 System.out.println("LOWER");
@@ -57,13 +54,9 @@ public class HighLow {
                 userNumber(random);
             } else if(userNum == random){
                 System.out.println("GOOD GUESS!");
-                break;
             }
-            break;
-        }
 
     }
-
 
 
 }
