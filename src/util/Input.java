@@ -74,7 +74,7 @@ public class Input {
 
     public double getDouble(){
 
-        System.out.print("Please enter a number with decimals: ");
+//        System.out.print("Please enter a number with decimals: ");
         double doubleNum = scanner.nextDouble();
 
         return doubleNum;
