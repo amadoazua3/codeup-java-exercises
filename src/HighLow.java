@@ -6,19 +6,9 @@ public class HighLow {
     public static void main(String[] args) {
 
 
-        int mysteryNumber = randomNumber();
+       int random = randomNumber();
 
-        while(true) {
-
-            int userNum = userNumber();
-
-            boolean game = guess(mysteryNumber, userNum);
-
-            if(game){
-                break;
-            }
-
-        }
+        userNumber(random);
 
     }
 
@@ -31,10 +21,12 @@ public class HighLow {
 
         int rando = rand.nextInt(upperbound);
 
+        System.out.println("Random number: " + rando);
+
         return rando;
     }
 
-    public static int userNumber(){
+    public static void userNumber(int random){
 
         Scanner scanner = new Scanner(System.in);
 
@@ -42,28 +34,34 @@ public class HighLow {
         int userInput = scanner.nextInt();
 
         if(userInput > 100){
-            userNumber();
+            userNumber(random);
         } else if(userInput < 0){
-            userNumber();
+            userNumber(random);
         }
-            return userInput;
+
+        guess(random, userInput);
 
     }
 
-    public static boolean guess(int mysteryNum, int userNum){
+    public static void guess(int random, int userNum){
 
-        if(userNum > mysteryNum){
-            System.out.println("LOWER");
-            userNumber();
-        } else if(userNum < mysteryNum){
-            System.out.println("HIGHER");
-            userNumber();
-        } else if(userNum == mysteryNum){
-            System.out.println("GOOD GUESS!");
-            return true;
+        while(true) {
+
+            System.out.println("User number: " + userNum);
+
+            if(userNum > random){
+                System.out.println("LOWER");
+                userNumber(random);
+            } else if(userNum < random){
+                System.out.println("HIGHER");
+                userNumber(random);
+            } else if(userNum == random){
+                System.out.println("GOOD GUESS!");
+                break;
+            }
+            break;
         }
 
-        return false;
     }
 
 
