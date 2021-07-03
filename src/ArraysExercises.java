@@ -25,10 +25,10 @@ public class ArraysExercises {
          System.out.println(n);
      }
 
-      addPerson(Person, personElement);
 
-//        System.out.println("Array after adding " + personElement +
-//        Arrays.toString());
+    System.out.println("Array after adding " + personElement +
+            " to the new array is now " +
+            Arrays.toString(addPerson(Person, personElement)));
 
     }
 
@@ -38,10 +38,15 @@ public class ArraysExercises {
 
     }
 
-    static String addPerson(String[] person, String element){
+    static String[] addPerson(String[] person, String element){
 
-        // this doesnt work just a stopping point for now
-        return person + element;
+        person = Arrays.copyOf(person, person.length + 1);
+
+        person[person.length - 1] = element;
+
+//        System.out.println(Arrays.toString(person));
+
+        return person;
 
     }
 
