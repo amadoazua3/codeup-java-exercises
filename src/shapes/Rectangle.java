@@ -1,8 +1,24 @@
 package shapes;
 
-public class Rectangle {
+public class Rectangle extends Quadrilateral implements Shape{
 
-//    private int length;
+
+    public Rectangle(double length, double width) {
+        super(length, width);
+    }
+
+    @Override
+    public double setLength() {
+        return 0;
+    }
+
+    @Override
+    public double setWidth() {
+        return 0;
+    }
+
+
+    //    private int length;
 //    private int width;
 //
 //    public Rectangle(int length, int width) {

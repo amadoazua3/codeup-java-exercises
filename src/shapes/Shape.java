@@ -1,6 +1,6 @@
 package shapes;
 
-abstract class Shape {
+interface Shape {
 
 
 
