@@ -2,8 +2,8 @@ package shapes;
 
 abstract class Quadrilateral implements Shape{
 
-        private double length;
-        private double width;
+        protected double length;
+        protected double width;
 
     public Quadrilateral(double length, double width) {
         this.length = length;
@@ -18,11 +18,17 @@ abstract class Quadrilateral implements Shape{
         return width;
     }
 
-    public abstract double setLength();
+    public abstract void setLength(double side);
 
-    public abstract double setWidth();
+    public abstract void setWidth(double side);
 
+    @Override
+    public double getArea() {
+        return 2 * (length + width);
+    }
 
-
-
+    @Override
+    public double getPerimeter() {
+        return length * width;
+    }
 }

@@ -3,18 +3,22 @@ package shapes;
 public class Rectangle extends Quadrilateral implements Shape{
 
 
-    public Rectangle(double length, double width) {
-        super(length, width);
+    public Rectangle(double side) {
+        super(side, side);
     }
 
     @Override
-    public double setLength() {
-        return 0;
+    public void setLength(double side) {
+
+        this.length = side;
+
     }
 
     @Override
-    public double setWidth() {
-        return 0;
+    public void setWidth(double side) {
+
+        this.width = side;
+
     }
 
 
