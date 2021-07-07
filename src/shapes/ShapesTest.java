@@ -17,13 +17,15 @@ public class ShapesTest {
 //        System.out.println("box2 perimeter is: " + box2.getPerimeter());
 
 
-        Shape myShape = new Square(5);
+        Quadrilateral myShape;
+
+        myShape = new Square(5);
         System.out.println("Area for square: " + myShape.getArea());
         System.out.println("Perimeter for square: " + myShape.getPerimeter());
 
-        Shape myShape2 = new Rectangle(5);
-        System.out.println("Area for rectangle: " + myShape2.getArea());
-        System.out.println("Perimeter for rectangle: " + myShape2.getPerimeter());
+        myShape = new Rectangle(5);
+        System.out.println("Area for rectangle: " + myShape.getArea());
+        System.out.println("Perimeter for rectangle: " + myShape.getPerimeter());
 
     }
 
