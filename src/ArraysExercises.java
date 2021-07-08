@@ -14,21 +14,16 @@ public class ArraysExercises {
 //            System.out.println(n);
 //        }
 
-     String[] Person = new String[3];
-     Person[0] = "Haruko";
-     Person[1] = "Naota";
-     Person[2] = "Ninamori";
 
-     String personElement = "Canti";
+        Person person = new Person("Haruko");
+        Person person2 = new Person("Naota");
+        Person person3 = new Person("Ninamori");
 
-     for(String n: Person){
-         System.out.println(n);
-     }
+        String[] personArray = {person.getName(), person2.getName(), person3.getName()};
+        System.out.println(Arrays.toString(personArray));
 
-
-    System.out.println("Array after adding " + personElement +
-            " to the new array is now " +
-            Arrays.toString(addPerson(Person, personElement)));
+        String[] newArray = addPerson(personArray, "Canti");
+        System.out.println(Arrays.toString(newArray));
 
     }
 
@@ -38,11 +33,11 @@ public class ArraysExercises {
 
     }
 
-    static String[] addPerson(String[] person, String element){
+    static String[] addPerson(String[] person, String newPerson){
 
         person = Arrays.copyOf(person, person.length + 1);
 
-        person[person.length - 1] = element;
+        person[person.length - 1] = newPerson;
 
 //        System.out.println(Arrays.toString(person));
 
