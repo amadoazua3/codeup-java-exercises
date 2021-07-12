@@ -18,12 +18,11 @@ public class Student {
 
         Student student = new Student("Amado");
 
-
         System.out.println(student.getName());
 
         student.addGrade(97);
-        student.addGrade(94);
-        student.addGrade(88);
+        student.addGrade(96);
+        student.addGrade(95);
         System.out.println(student.grade);
 
         double average = student.getGradeAverage();
