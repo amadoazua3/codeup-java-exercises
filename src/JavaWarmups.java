@@ -6,7 +6,7 @@ public class JavaWarmups {
 
         String strExample = "A B C D E F G";
 
-        String strExp = "Erik Moses Chris Amado CyberPunk2077";
+        String strExp = "Erik Moses Chris Amado CyberPunk2077-GameOfTheYear";
 
         System.out.println(stringy(strExample));
         System.out.println(stringy(strExp));
