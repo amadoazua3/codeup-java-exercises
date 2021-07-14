@@ -18,6 +18,11 @@ public class ExceptionsAndErrorHandlingClassExercise {
 
         } catch (InputMismatchException exception){
             System.out.println("This is not a valid input");
+            System.out.println(exception.getMessage());
+        } catch (NumberFormatException e){
+            System.out.println(e.getMessage());
+        } finally {
+            System.out.println("this will always run");
         }
 
     }
