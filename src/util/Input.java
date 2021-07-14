@@ -1,4 +1,5 @@
 package util;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Input {
@@ -15,9 +16,7 @@ public class Input {
 
     public String getString(){
 
-        String message = "hello";
-
-        return message;
+        return this.scanner.nextLine();
     }
 
     public boolean yesNo(){
@@ -33,52 +32,79 @@ public class Input {
 
     }
 
-    public int getInt(int min, int max){
+//    public int getInt(int min, int max){
+//
+//        this.number = getInt();
+//
+//        if(number < min){
+//            System.out.println("Please pick a number between " + min + " and " + max);
+//            getInt(min, max);
+//        } else if(number > max){
+//            System.out.println("Please pick a number between " + min + " and " + max);
+//            getInt(min, max);
+//        }
+//
+//        return this.number;
+//    }
 
-        this.number = getInt();
+//    public int getInt(){
+//
+//        System.out.print("Please enter a number: ");
+//        int number = scanner.nextInt();
+//
+//        return number;
+//    }
 
-        if(number < min){
-            System.out.println("Please pick a number between " + min + " and " + max);
-            getInt(min, max);
-        } else if(number > max){
-            System.out.println("Please pick a number between " + min + " and " + max);
-            getInt(min, max);
-        }
+//    public double getDouble(double min, double max){
+//
+//        this.doubleNum = getDouble();
+//
+//        if (doubleNum < min) {
+//            System.out.println("Please pick a number between " + min + " and " + max);
+//            getDouble(min, max);
+//        } else if (doubleNum > max) {
+//            System.out.println("Please pick a number between " + min + " and " + max);
+//            getDouble(min, max);
+//        }
+//
+//        return this.doubleNum;
+//    }
 
-        return this.number;
-    }
 
     public int getInt(){
 
-        System.out.print("Please enter a number: ");
-        int number = scanner.nextInt();
+        System.out.print("Please enter a integer: ");
 
-        return number;
-
-    }
-
-    public double getDouble(double min, double max){
-
-        this.doubleNum = getDouble();
-
-        if(doubleNum < min){
-            System.out.println("Please pick a number between " + min + " and " + max);
-            getDouble(min, max);
-        } else if(doubleNum > max){
-            System.out.println("Please pick a number between " + min + " and " + max);
-            getDouble(min, max);
+        try{
+            return Integer.valueOf(getString());
+        } catch (NumberFormatException e){
+            System.out.println("Not a number");
+            return getInt();
         }
 
-        return this.doubleNum;
     }
 
     public double getDouble(){
 
-//        System.out.print("Please enter a number with decimals: ");
-        double doubleNum = scanner.nextDouble();
+        System.out.print("Please enter a double: ");
 
-        return doubleNum;
+        try{
+            return Double.valueOf(getString());
+
+        } catch (NumberFormatException e){
+            System.out.println("Not a number");
+            return getDouble();
+        }
+
     }
+
+//    public double getDouble(){
+//
+////        System.out.print("Please enter a number with decimals: ");
+//        double doubleNum = scanner.nextDouble();
+//
+//        return doubleNum;
+//    }
 
     public int showOptions() {
         {
