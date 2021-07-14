@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ExceptionsAndErrorHandlingClassExercise {
@@ -6,15 +7,18 @@ public class ExceptionsAndErrorHandlingClassExercise {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Age: ");
-        int patronAge = scanner.nextInt();
+        try {
+            System.out.print("Age: ");
+            int patronAge = scanner.nextInt();
 
-        System.out.print("Starting deposit: $");
-        double startDeposit = scanner.nextDouble();
+            System.out.print("Starting deposit: $");
+            double startDeposit = scanner.nextDouble();
 
-        System.out.println(eligbilityResult(eligbilityCheck(patronAge, startDeposit)));
+            System.out.println(eligbilityResult(eligbilityCheck(patronAge, startDeposit)));
 
-
+        } catch (InputMismatchException exception){
+            System.out.println("This is not a valid input");
+        }
 
     }
 
