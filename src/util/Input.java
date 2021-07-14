@@ -70,6 +70,14 @@ public class Input {
 //        return this.doubleNum;
 //    }
 
+//    public double getDouble(){
+//
+////        System.out.print("Please enter a number with decimals: ");
+//        double doubleNum = scanner.nextDouble();
+//
+//        return doubleNum;
+//    }
+
 
     public int getInt(){
 
@@ -98,13 +106,6 @@ public class Input {
 
     }
 
-//    public double getDouble(){
-//
-////        System.out.print("Please enter a number with decimals: ");
-//        double doubleNum = scanner.nextDouble();
-//
-//        return doubleNum;
-//    }
 
     public int showOptions() {
         {
