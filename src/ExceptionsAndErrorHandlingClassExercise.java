@@ -34,12 +34,9 @@ public class ExceptionsAndErrorHandlingClassExercise {
             return status;
         }
 
-
         return status;
 
     }
-
-
 
     public static String eligbilityResult(String str){
 
@@ -50,13 +47,7 @@ public class ExceptionsAndErrorHandlingClassExercise {
             return "Sorry, but you do not meet the requirements to open an account with Banco di Laura.";
         }
 
-
         return str;
     }
-
-
-
-
-
 
 }
