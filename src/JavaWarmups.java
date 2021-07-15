@@ -50,14 +50,15 @@ public class JavaWarmups {
 
         int upperLimit = 50;
 
+        int rando = random.nextInt(upperLimit);
+
         try{
 
-            int rando = random.nextInt(upperLimit);
             System.out.println("Character is: " + str.charAt(rando));
 
         } catch (StringIndexOutOfBoundsException e){
 
-            System.out.println("Random was " + random + "\nString has indexes of " + str.length());
+            System.out.println("Random was " + rando + "\nString has indexes of " + str.length());
             System.out.println("Error was " + e.getMessage());
             System.out.println("Rerunning the program: \n\n");
             randomGenerator(str);
