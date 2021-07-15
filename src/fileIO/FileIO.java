@@ -3,6 +3,8 @@ package fileIO;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FileIO {
 
@@ -34,14 +36,29 @@ public class FileIO {
         // Print out the final location of the file
         System.out.println(path.toAbsolutePath());
 
-        try {
-            IOUtil.printFileContents(IOUtil.readFromFile(path));
-        } catch (IOException e){
-            System.out.println("Unable to read contents of the file at: " + path.toAbsolutePath());
-        }
+        // Try to print the contents to the file BEFORE we write
+        IOUtil.tryPrintContents(path);
+
+        // Try to write to the file
+        IOUtil.tryWriteToFile(getContent(), path);
+
+        // Try to print the contents to the file AFTER we write
+        IOUtil.tryPrintContents(path);
+
 
     }
 
+
+    public static List<String> getContent(){
+
+        List<String> contentToWrite = new ArrayList<String>();
+        contentToWrite.add("This is a new line!");
+        contentToWrite.add("ANOTHER LINE");
+        contentToWrite.add("ANOTHER ANOTHER LINE!!!");
+
+        return contentToWrite;
+
+    }
 
 
 
