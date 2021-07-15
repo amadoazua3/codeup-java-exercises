@@ -18,15 +18,24 @@ public class FileIO {
 
 //        tryCreateDirectory(getFilePath("src", "fileIO", "files"));
 
+      init();
+
+    }
+
+    public static void init(){
+
+        // Try to create the directory
         Path path = getPath("src", "fileIO", "files");
         tryCreateDirectory(path);
 
+        // Try to create the file
         path = Paths.get(path.toAbsolutePath().toString(), "test.txt");
+        tryCreateFile(path);
 
+        // Print out the final location of the file
         System.out.println(path.toAbsolutePath());
-
-
     }
+
 
     public static Path getPath(String filename){
         return Paths.get(filename);
