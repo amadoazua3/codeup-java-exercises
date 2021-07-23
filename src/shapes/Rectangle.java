@@ -1,6 +1,7 @@
 package shapes;
 
-public class Rectangle extends Quadrilateral implements Shape{
+public class Rectangle extends Quadrilateral {
+
 
 
     public Rectangle(double side) {
@@ -22,7 +23,7 @@ public class Rectangle extends Quadrilateral implements Shape{
     }
 
 
-    //    private int length;
+//    private int length;
 //    private int width;
 //
 //    public Rectangle(int length, int width) {
